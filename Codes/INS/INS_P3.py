@@ -40,7 +40,7 @@ def railfenceDecrypt(ctext, fence, nkey):
     newf = buildRailfence(ctext, nkey)
     while (i < len(ctext)):
         if (rrow < nkey and rrow >= 0):
-            #newf[rrow][i] = ctext[i]
+            newf[rrow][i] = "*"
             rrow += (1 * rev)
             i += 1
         else:
@@ -53,25 +53,31 @@ def railfenceDecrypt(ctext, fence, nkey):
     jth = 0
     printRailfence(newf)
     deciphertext = ""
-    """ for i in range(len(newf)):
+    for i in range(len(newf)):
         for j in range(len(newf[i])):
             if (newf[i][j] == "*"):
                 newf[i][j] = ctext[jth]
-                jth += 1 """
+                jth += 1
     
-    for i in range(len(newf[i])):
+    for i in range(len(newf[0])):
         for j in range(len(newf)):
             if (newf[j][i] != " "):
                 deciphertext += newf[j][i]
     printRailfence(newf)
-    return deciphertext
-    
+    return deciphertext  
 
-
-fence = buildRailfence("movetroopstowest", 5)
+""" fence = buildRailfence("move_troops_to_west", 5)
 #printRailfence(fence)
-fence, ciphertext = railfenceEncrypt("movetroopstowest", 5, fence)
+fence, ciphertext = railfenceEncrypt("move_troops_to_west", 5, fence)
 print("Ciphered Text: ",ciphertext)
 printRailfence(fence)
 deciphertext = railfenceDecrypt(ciphertext, fence, 5)
+print("Deciphered Text: ",deciphertext) """
+
+fence = buildRailfence("cold_weather_is_coming", 9)
+#printRailfence(fence)
+fence, ciphertext = railfenceEncrypt("cold_weather_is_coming", 9, fence)
+print("Ciphered Text: ",ciphertext)
+printRailfence(fence)
+deciphertext = railfenceDecrypt(ciphertext, fence, 9)
 print("Deciphered Text: ",deciphertext)
