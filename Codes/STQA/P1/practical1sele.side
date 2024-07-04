@@ -1,0 +1,28 @@
+{
+  "id": "b31479f8-a1c5-42d7-b21c-e6a0e9e5c133",
+  "version": "2.0",
+  "name": "practical1",
+  "url": "",
+  "tests": [{
+    "id": "ae52ab51-e273-42f0-a210-638e5db64d06",
+    "name": "Untitled",
+    "commands": [{
+      "id": "5b6eb357-b4a0-4d0c-a36e-61274b8f7b91",
+      "comment": "",
+      "command": "open",
+      "target": "file:///C:/Users/Vaishanvi/Desktop/Siddhesh/SEM%20V/SEM_V/Codes/SAQL/P1/calwebapp.html",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "8c352b13-d14d-43a4-9042-dbd16743235a",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["ae52ab51-e273-42f0-a210-638e5db64d06"]
+  }],
+  "urls": [],
+  "plugins": []
+}

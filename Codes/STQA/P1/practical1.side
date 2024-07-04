@@ -1,0 +1,83 @@
+{
+  "id": "b31479f8-a1c5-42d7-b21c-e6a0e9e5c133",
+  "version": "2.0",
+  "name": "practical1",
+  "url": "http://localhost:8000",
+  "tests": [{
+    "id": "ae52ab51-e273-42f0-a210-638e5db64d06",
+    "name": "addtest",
+    "commands": [{
+      "id": "fa48127a-d48a-4cd3-b6e3-13a4403a65c3",
+      "comment": "",
+      "command": "open",
+      "target": "/calwebapp.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "123314b4-d0b8-46f0-b5f3-d45f9338e13e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x832",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc247ab6-d35d-4ad0-8bf4-762d801cde6b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mt-3 > .col-3:nth-child(1) > .btn",
+      "targets": [
+        ["css=.mt-3 > .col-3:nth-child(1) > .btn", "css:finder"],
+        ["xpath=//button[@onclick=\"appendNumber('1')\"]", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c90ad461-e12b-4e22-a30f-6d6fe2d9f783",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mt-3 .btn-info",
+      "targets": [
+        ["css=.mt-3 .btn-info", "css:finder"],
+        ["xpath=//button[@onclick=\"setOperation('+')\"]", "xpath:attributes"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'+')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "20433b08-7dfc-4539-9366-21b4f26aa965",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mt-3 > .col-3:nth-child(2) > .btn",
+      "targets": [
+        ["css=.mt-3 > .col-3:nth-child(2) > .btn", "css:finder"],
+        ["xpath=//button[@onclick=\"appendNumber('2')\"]", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b76756e-2c8b-481d-9c73-c5fa25611a37",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-success",
+      "targets": [
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//button[@onclick='calculate()']", "xpath:attributes"],
+        ["xpath=//div[4]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'=')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "8c352b13-d14d-43a4-9042-dbd16743235a",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["ae52ab51-e273-42f0-a210-638e5db64d06"]
+  }],
+  "urls": ["http://localhost:8000/"],
+  "plugins": []
+}
