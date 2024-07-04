@@ -1,0 +1,21 @@
+{
+  "id": "b55a1f95-af02-4df6-9fff-f1486f44bdd2",
+  "version": "2.0",
+  "name": "randomweb",
+  "url": "https://www.rapidtables.com/convert/number/decimal-to-binary.html",
+  "tests": [{
+    "id": "73dc4210-6dec-4c49-b41f-168be55a5bb2",
+    "name": "Untitled",
+    "commands": []
+  }],
+  "suites": [{
+    "id": "f5b5e054-6aa1-4b7a-a04a-9a1be33ff942",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["73dc4210-6dec-4c49-b41f-168be55a5bb2"]
+  }],
+  "urls": [],
+  "plugins": []
+}

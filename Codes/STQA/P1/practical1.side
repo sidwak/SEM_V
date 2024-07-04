@@ -2,7 +2,7 @@
   "id": "b31479f8-a1c5-42d7-b21c-e6a0e9e5c133",
   "version": "2.0",
   "name": "practical1",
-  "url": "http://localhost:8000",
+  "url": "http://localhost:8000/Codes/STQA/P1/calwebapp.html",
   "tests": [{
     "id": "ae52ab51-e273-42f0-a210-638e5db64d06",
     "name": "addtest",
@@ -10,14 +10,7 @@
       "id": "fa48127a-d48a-4cd3-b6e3-13a4403a65c3",
       "comment": "",
       "command": "open",
-      "target": "/calwebapp.html",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "123314b4-d0b8-46f0-b5f3-d45f9338e13e",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1552x832",
+      "target": "http://localhost:8000/Codes/STQA/P1/calwebapp.html",
       "targets": [],
       "value": ""
     }, {
@@ -78,6 +71,6 @@
     "timeout": 300,
     "tests": ["ae52ab51-e273-42f0-a210-638e5db64d06"]
   }],
-  "urls": ["http://localhost:8000/"],
+  "urls": ["http://localhost:8000/", "http://localhost:8000/Codes/STQA/P1/calwebapp.html"],
   "plugins": []
 }
