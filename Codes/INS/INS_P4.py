@@ -21,6 +21,8 @@ class Playfair:
     def Encrypt(self, ptx: str, keymat):
         ptx = ptx.replace("j", "i")
         ptx = ptx.replace(" ", "")
+        if (len(ptx)%2 != 0):
+            ptx += "z"
         pairs = [ptx[i:i+2] for i in range(0, len(ptx), 2)]
         #for each in pairs:
         #    print(each)
