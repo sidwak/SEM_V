@@ -1,0 +1,42 @@
+{
+  "id": "ffb1fac1-87c9-48a1-b7f0-1017acb7fd51",
+  "version": "2.0",
+  "name": "practical2",
+  "url": "",
+  "tests": [{
+    "id": "be08969d-6e12-46da-b644-430dd97ef1b7",
+    "name": "titletestcase",
+    "commands": [{
+      "id": "baff5c8b-95fa-4086-b1e3-4c54de9d3514",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "85597095-1c6a-4b4d-a5e5-79c5a0b27264",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "85048af8-f8c4-479d-93fa-25e36339e7e7",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e6dfb35f-b355-4896-9f45-ef966ffc2b04",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["be08969d-6e12-46da-b644-430dd97ef1b7"]
+  }],
+  "urls": [],
+  "plugins": []
+}
