@@ -2,7 +2,7 @@
   "id": "ffb1fac1-87c9-48a1-b7f0-1017acb7fd51",
   "version": "2.0",
   "name": "practical2",
-  "url": "",
+  "url": "https://mail.google.com/",
   "tests": [{
     "id": "be08969d-6e12-46da-b644-430dd97ef1b7",
     "name": "titletestcase",
@@ -14,18 +14,210 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "85597095-1c6a-4b4d-a5e5-79c5a0b27264",
+      "id": "0ea9b696-4d6e-4a8b-827f-2fad31799789",
       "comment": "",
-      "command": "setWindowSize",
+      "command": "assertTitle",
+      "target": "Calculator Web App",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "2de09785-8840-4e02-b5cf-10c3041bd323",
+    "name": "addoperation",
+    "commands": [{
+      "id": "719ba30c-3c51-413e-9c02-d0fa9b3370fa",
+      "comment": "",
+      "command": "open",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-      "id": "85048af8-f8c4-479d-93fa-25e36339e7e7",
+      "id": "1ebbc1ff-bb21-45f4-9fbd-b638a9c24178",
       "comment": "",
-      "command": "close",
+      "command": "click",
+      "target": "xpath=//button[@id='1btn']",
+      "targets": [
+        ["css=#\\31 btn > .btn", "css:finder"],
+        ["xpath=//button[@onclick=\"appendNumber('1')\"]", "xpath:attributes"],
+        ["xpath=//div[@id='1btn']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f94f72fb-cfbf-4985-be8b-d19500b2116d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@id='plusbtn']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "db3ded89-eade-4975-a8e4-5d7a9cd9e973",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@id='1btn']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "591cf1df-aff5-4951-ba5f-c217eb39f5a0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@id='equalbtn']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f48e57c6-eb2d-4d0c-98e1-cab436d67164",
+      "comment": "",
+      "command": "assertValue",
+      "target": "xpath=//input[@id='display']",
+      "targets": [
+        ["css=.mt-3 > .col-3:nth-child(4)", "css:finder"],
+        ["xpath=//div[4]", "xpath:position"]
+      ],
+      "value": "2"
+    }]
+  }, {
+    "id": "f68e4e1a-7ed0-4a45-a573-86a6746241f6",
+    "name": "redbus",
+    "commands": [{
+      "id": "278e22e3-d53b-4ee3-a82b-1eaed5d5fe5b",
+      "comment": "",
+      "command": "open",
       "target": "",
       "targets": [],
+      "value": ""
+    }, {
+      "id": "cf968470-e180-46fb-afe2-88456e196ea3",
+      "comment": "",
+      "command": "click",
+      "target": "id=rail_tickets_vertical",
+      "targets": [
+        ["id=rail_tickets_vertical", "id"],
+        ["css=#rail_tickets_vertical", "css:finder"],
+        ["xpath=//li[@id='rail_tickets_vertical']", "xpath:attributes"],
+        ["xpath=//header[@id='main_header_new']/div/ul/li[2]", "xpath:idRelative"],
+        ["xpath=//li[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e163807e-d5d9-4a9f-9029-adea917fce96",
+      "comment": "",
+      "command": "click",
+      "target": "id=src",
+      "targets": [
+        ["id=src", "id"],
+        ["css=#src", "css:finder"],
+        ["xpath=//input[@id='src']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/section/div/div[3]/div[2]/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc3c0995-fb26-4cde-bb02-b7b6a5a36fcc",
+      "comment": "",
+      "command": "type",
+      "target": "id=src",
+      "targets": [
+        ["id=src", "id"],
+        ["css=#src", "css:finder"],
+        ["xpath=//input[@id='src']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/section/div/div[3]/div[2]/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Mumbai"
+    }, {
+      "id": "eded2633-bbd1-4968-bfeb-59119a4e3765",
+      "comment": "",
+      "command": "click",
+      "target": "css=.solr_results_block:nth-child(2)",
+      "targets": [
+        ["css=.solr_results_block:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='root']/section/div/div[3]/div[2]/div/div/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "451bdc60-63f2-4f90-ae59-44922cfc0e53",
+      "comment": "",
+      "command": "click",
+      "target": "id=dst",
+      "targets": [
+        ["id=dst", "id"],
+        ["css=#dst", "css:finder"],
+        ["xpath=//input[@id='dst']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/section/div/div[3]/div[2]/div/form/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ad299f7-a4b5-419a-a316-27664ede26c5",
+      "comment": "",
+      "command": "type",
+      "target": "id=dst",
+      "targets": [
+        ["id=dst", "id"],
+        ["css=#dst", "css:finder"],
+        ["xpath=//input[@id='dst']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/section/div/div[3]/div[2]/div/form/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Goa"
+    }, {
+      "id": "ba510a82-81a1-4d08-94d9-149449191d76",
+      "comment": "",
+      "command": "click",
+      "target": "css=.solr_results_block:nth-child(2)",
+      "targets": [
+        ["css=.solr_results_block:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='root']/section/div/div[3]/div[2]/div/div/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "079048ab-9dae-41f2-9c1b-72c7d58cbb6f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.search-btn",
+      "targets": [
+        ["css=.search-btn", "css:finder"],
+        ["xpath=//div[@id='root']/section/div/div[3]/div[2]/div/form/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "08c45849-f6e4-4339-ae58-0075807ce4ee",
+    "name": "gmail",
+    "commands": [{
+      "id": "8fd95e41-7b08-427b-9824-cec01a8c2e1a",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0a0c0485-3f42-4242-9197-c12ebc92656f",
+      "comment": "",
+      "command": "click",
+      "target": "id=:l6",
+      "targets": [
+        ["id=:l6", "id"],
+        ["css=#\\3Al6", "css:finder"],
+        ["xpath=//span[@id=':l6']", "xpath:attributes"],
+        ["xpath=//div[@id=':ky']/div/div[2]/div/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c68aece7-0287-43c3-b86a-23311ffd42fc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.aHS-bnx",
+      "targets": [
+        ["css=.aHS-bnx", "css:finder"],
+        ["xpath=//div[@id=':ln']/div", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div", "xpath:position"]
+      ],
       "value": ""
     }]
   }],
@@ -37,6 +229,6 @@
     "timeout": 300,
     "tests": ["be08969d-6e12-46da-b644-430dd97ef1b7"]
   }],
-  "urls": [],
+  "urls": ["http://localhost:8000/Codes/STQA/P1/calwebapp.html", "https://www.redbus.in/", "https://mail.google.com/"],
   "plugins": []
 }
