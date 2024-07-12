@@ -54,8 +54,8 @@ class Columnar:
                     pos += 1
                 else:
                     mat[j][dkey[i][1]] = "_"
-            self.printKeymat(mat)
-            print("\n")
+            #self.printKeymat(mat)
+            #print("\n")
         dtxt = ""
         for i in range(len(mat)):
             for j in range(len(mat[i])):
@@ -105,7 +105,8 @@ else:
 
 columnar.texttoint("hack")
 ciphertext = columnar.Encrypt(plaintext, key)
-print(plaintext)
-print(ciphertext)
+print("Plaintext:",plaintext)
+print("Key:",key)
+print("Ciphertext:",ciphertext)
 deciphertext = columnar.Decrypt(ciphertext, key)
-print(deciphertext)
+print("Deciphertext:",deciphertext)
