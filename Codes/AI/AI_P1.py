@@ -22,7 +22,7 @@ class Graph:
             
 
 graph = Graph()
-graph.addEdge('a','b')
+graph.addEdge('a','b')  #just reverse add in addEgde function rather doing this
 graph.addEdge('b','a')
 graph.addEdge('a','c')
 graph.addEdge('c','a')
