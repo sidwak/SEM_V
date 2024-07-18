@@ -2,7 +2,7 @@ import random
 class TickTacToe:
     mat= []
     def printAfterTurn(self):
-        print("game after you turn:")
+        print("Game after you turn:")
         self.printKeymat()
 
     def printKeymat(self):
@@ -78,19 +78,19 @@ class TickTacToe:
         if (self.mat[0][0] == whichTurn and self.mat[0][1] == whichTurn and self.mat[0][2] == whichTurn):
             isWin = True
         elif (self.mat[1][0] == whichTurn and self.mat[1][1] == whichTurn and self.mat[1][2] == whichTurn):
-            isWin = False
+            isWin = True
         elif (self.mat[2][0] == whichTurn and self.mat[2][1] == whichTurn and self.mat[2][2] == whichTurn):
-            isWin = False
+            isWin = True
         elif (self.mat[0][0] == whichTurn and self.mat[1][0] == whichTurn and self.mat[2][0] == whichTurn):
-            isWin = False
+            isWin = True
         elif (self.mat[0][1] == whichTurn and self.mat[1][1] == whichTurn and self.mat[2][1] == whichTurn):
-            isWin = False
+            isWin = True
         elif (self.mat[0][2] == whichTurn and self.mat[1][2] == whichTurn and self.mat[2][2] == whichTurn):
-            isWin = False
+            isWin = True
         elif (self.mat[0][0] == whichTurn and self.mat[1][1] == whichTurn and self.mat[2][2] == whichTurn):
-            isWin = False
+            isWin = True
         elif (self.mat[0][2] == whichTurn and self.mat[1][1] == whichTurn and self.mat[2][0] == whichTurn):
-            isWin = False
+            isWin = True
         return isWin
 
 Game = TickTacToe()
