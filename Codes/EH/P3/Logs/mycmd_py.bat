@@ -1,0 +1,1 @@
+WMIC /OUTPUT:\HTML\process_log.html PROCESS get name,processid,creationdate /FORMAT:hform
