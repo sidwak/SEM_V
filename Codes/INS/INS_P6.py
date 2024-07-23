@@ -71,8 +71,8 @@ class RSA:
         possibleCobi = [ ]
         shiftlist = [chr(i) for i in range(97,123)]
 
-        for i in range(0, 33):
-            threlist = [i for i in range(0, 33)]
+        for i in range(0, n):
+            threlist = [i for i in range(0, n)]
             threlist = threlist[i: ] + threlist[:i]
             trial = ""
             noerror = True
