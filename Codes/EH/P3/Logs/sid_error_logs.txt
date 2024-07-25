@@ -1,0 +1,5 @@
+2024-07-22 21:31:49,788 ERROR __main__ division by zero
+2024-07-22 21:31:49,788 ERROR __main__ can only concatenate str (not "int") to str
+2024-07-22 21:31:49,788 ERROR __main__ list index out of range
+2024-07-22 21:31:49,788 ERROR __main__ 'str' object has no attribute 'reverse'
+2024-07-22 21:31:49,788 ERROR __main__ 'tuple' object does not support item assignment
