@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        table, th , td {
+          border: 1px solid grey;
+          border-collapse: collapse;
+          padding: 5px;
+        }
+        
+        table tr:nth-child(odd) {
+          background-color: #f1f1f1;
+        }
+        
+        table tr:nth-child(even) {
+          background-color: #ffffff;
+        }
+        </style>
+  </head>
+  <body ng-app="myApp" ng-controller="myCtrl">
+    <div>
+      <table>
+        <tr>
+            <td>Enter first name:</td>
+            <td><input type="text" ng-model="userdata.name.firstName"/></td>
+        </tr>
+        <tr>
+            <td>Enter last name:</td>
+            <td><input type="text" ng-model="userdata.name.lastName"/></td>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td>{{userdata.getName()}}</td>
+        </tr>
+        <tr>
+            <td>Subject:</td>
+            <td>
+                <table>
+                    <tr ng-repeat="x in userdata.subjects">
+                        <td>{{x.name}}</td>
+                        <td>{{x.Marks}}</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+          $scope.userdata = {
+            name: {firstName: "Default", lastName: "Name"},
+            subjects: {
+                headin : {name: "Subjects", Marks: "Marks"},
+                sub1 : {name: "Physics", Marks: "70"},
+                sub2 : {name: "Chemistry", Marks: "80"},
+                sub3 : {name: "Math", Marks: "65"},
+                sub4 : {name: "English", Marks: "75"},
+                sub5 : {name: "Hindi", Marks: "67"}
+            },
+            getName: function(){
+              return $scope.userdata.name.firstName + " " + $scope.userdata.name.lastName
+            }
+          }
+        }
+      );
+    </script>
+  </body>
+</html>

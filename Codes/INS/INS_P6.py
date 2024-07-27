@@ -83,8 +83,8 @@ class RSA:
                 except Exception as err:
                     trial += "_"
                     noerror = False
-            #print(threlist)
-            #print(shiftlist)
+            print(threlist)
+            print(shiftlist)
             print("Combination ",i," :",trial)
             if (noerror == True):
                 possibleCobi.append(trial)
