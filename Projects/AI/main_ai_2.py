@@ -38,7 +38,8 @@ scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-if False:
+isTrain = False
+if isTrain:
     # Define the model using keras.src.Model
     inputs = Input(shape=(X_train_scaled.shape[1],))
     x = Dense(64, activation='relu')(inputs)
@@ -61,11 +62,11 @@ if False:
     predictions = model.predict(X_test_scaled)
 
     # Save the trained model to a file
-    model.save('calorie_prediction_model.keras')
+    model.save('distance_calorie_prediction_model.keras')
 else:
-    model = load_model('calorie_prediction_model.keras')
+    model = load_model('distance_calorie_prediction_model.keras')
     predictions = model.predict(X_test_scaled)
-    with open('scaler.pkl', 'wb') as f:
+    with open('distance_scaler.pkl', 'wb') as f:
         pickle.dump(scaler, f)
     # Display some predictions
     for i in range(5):
