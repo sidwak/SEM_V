@@ -45,5 +45,34 @@ namespace webservicesp1n1
             float convertedAmount = (float)inAmount / (float)outRate;
             return (convertedAmount).ToString() + "$";
         }
+
+        [WebMethod]
+        public string DoMath(int opr1, int opr2, string whichOpr)
+        {
+            int ans = -1;
+            try
+            {
+                switch (whichOpr)
+                {
+                    case "+":
+                        ans = opr1 + opr2;
+                        break;
+                    case "-":
+                        ans = opr1 - opr2;
+                        break;
+                    case "/":
+                        ans = opr1 / opr2;
+                        break;
+                    case "*":
+                        ans = opr1 * opr2;
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }  
+            return ans.ToString();
+        }
     }
 }
