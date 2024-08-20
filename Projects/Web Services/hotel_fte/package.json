@@ -1,5 +1,5 @@
 {
-  "name": "applewatch",
+  "name": "hotel_fte",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "dayjs": "^1.11.12",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
-    "react-spinners": "^0.14.1"
+    "react-tailwindcss-datepicker": "^1.6.6",
+    "swr": "^2.2.5"
   },
   "devDependencies": {
     "@types/node": "^20",

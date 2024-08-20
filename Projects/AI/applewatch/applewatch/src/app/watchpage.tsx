@@ -1,9 +1,13 @@
 import Image from "next/image";
 import watchJPG from "../assets/watefd.png";
-import WeatherApp from "./weatherapp";
 import MinutesApp from "./minutesApp";
+import WalkApp from "./walkApp";
 
-export default function WatchPage() {
+interface I_WatchPageProps {
+  isWalkApp: boolean;
+}
+
+export default function WatchPage(props: I_WatchPageProps) {
   return (
     <div
       className="w-full h-full flex justify-center items-center "
@@ -15,8 +19,7 @@ export default function WatchPage() {
     >
       <div className=" w-[380px] h-[465px] bg-black rounded-[90px] flex justify-center items-center">
         <div className="text-white text-2xl">
-          {/* <WeatherApp /> */}
-          <MinutesApp />
+          {props.isWalkApp ? <WalkApp /> : <MinutesApp />}
         </div>
       </div>
     </div>

@@ -13,9 +13,6 @@ from keras.src.models import Model
 from keras.src.saving import load_model
 import pickle
 
-# Load your dataset
-# Assuming the dataset is in a CSV file called 'activity_data.csv'
-# with columns: 'veryActiveMinutes', 'fairlyActiveMinutes', 'lightlyActiveMinutes', 'sedentaryMinutes', 'dayOfWeek', 'caloriesBurned'
 data = pd.read_csv('dailyActivity_merged.csv')
 
 unnecessarydata = [
@@ -25,18 +22,18 @@ unnecessarydata = [
     'TrackerDistance', 'LoggedActivitiesDistance', 'Calories'
 ]
 
-# Split features and target
+# Spliting features and target
 X = data.drop(unnecessarydata, axis=1)
 y = data['Calories']
 
 X["ActivityDate"] = pd.to_datetime(X['ActivityDate'])
 X["ActivityDate"] = X["ActivityDate"].dt.day_name()
-# One-hot encode the 'dayOfWeek' column
+# One-hot encoding the 'ActivityDate' column
 X = pd.get_dummies(X, columns=['ActivityDate'])
 
-print(X.info())
-print(X.head(3))
-print(y.head(3))
+#print(X.info())
+#print(X.head(3))
+#print(y.head(3))
 """
 #   Column                  Non-Null Count  Dtype
 ---  ------                  --------------  -----
@@ -55,51 +52,49 @@ print(y.head(3))
 The weekdays will be ordered in alpha order after the getDummies() function
 """
 
-# Split the data into training and test sets
+# Spliting the data into training and test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Normalize the numerical features
+# Normalizing the numerical features
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
 isTrain = False
 if isTrain:
-    # Define the input layer
+    # Defining the input layer
     inputs = Input(shape=(X_train.shape[1],))
-    # Define hidden layers
+    # Defining hidden layers
     x = Dense(64, activation='relu')(inputs)
     x = Dense(32, activation='relu')(x)
 
-    # Define the output layer
+    # Defining the output layer
     outputs = Dense(1)(x)
 
-    # Create the model
+    # Creating the model
     model = Model(inputs=inputs, outputs=outputs)
 
-    # Compile the model
+    # Compiling the model
     model.compile(optimizer='adam', loss='mean_squared_error', metrics=['mae'])
 
-    # Train the model
+    # Training the model
     model.fit(X_train, y_train, epochs=100, batch_size=32, validation_split=0.2)
 
-    # Evaluate the model
+    # Evaluating the model
     loss, mae = model.evaluate(X_test, y_test)
     print(f'Mean Absolute Error: {mae}')
 
     model.save('calorie_minutes_prediction_model.keras')
 else:
     model = load_model('calorie_minutes_prediction_model.keras')
-    # Make predictions
+
     y_pred = model.predict(X_test)
 
     with open('minutes_model_scaler.pkl', 'wb') as f:
         pickle.dump(scaler, f)
 
-    # Calculate the mean squared error
     mse = mean_squared_error(y_test, y_pred)
     print(f'Mean Squared Error: {mse}')
 
-    # Display some predictions
     for i in range(5):
         print(f"Predicted: {y_pred[i][0]:.2f}, Actual: {y_test.iloc[i]}")
