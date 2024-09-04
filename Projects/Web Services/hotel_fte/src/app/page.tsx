@@ -19,7 +19,7 @@ function CardsLayout() {
     cards.push(i);
   } */
 
-  const [data, setData]: any = useState(null);
+  const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -35,11 +35,12 @@ function CardsLayout() {
               rDesc={data[i]["r_desc"]}
               rImg={data[i]["r_img"]}
               rPrice={data[i]["r_price"]}
+              key={i}
             />
           );
         }
         setCards(numArr);
-        console.log(cards);
+        console.log(numArr);
         setLoading(false);
       });
   }, []);
@@ -52,7 +53,7 @@ function CardsLayout() {
         <GridLoading />
       ) : (
         <div className="grid xl:grid-cols-3 grid-cols-2 gap-12 w-fit h-fit mx-auto">
-          cards
+          {cards}
         </div>
       )}
     </div>

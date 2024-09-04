@@ -1,0 +1,8 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gs="mainService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gs:GetHelloRequest>
+         <gs:message>Spain</gs:message>
+      </gs:GetHelloRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

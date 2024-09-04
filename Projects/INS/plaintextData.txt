@@ -1,0 +1,3 @@
+Hello this is a test to write and read data from the file 1 2 3 4 , . *) %*&
+multiline line test
+to check in new line is tartin

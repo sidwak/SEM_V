@@ -1,0 +1,146 @@
+<xs:schema 
+xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+xmlns:tns="mainService"
+targetNamespace="mainService"
+elementFormDefault="qualified">
+
+    <!-- Definition of the request message (no parameters) -->
+    <xs:element name="GetHelloRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="message" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definition of the response message -->
+    <xs:element name="GetHelloResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="message" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getRoomsRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="message" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getRoomsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="roomDetails" type="tns:roomDetailsType" minOccurs='0' maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="roomDetailsType">
+        <xs:sequence>
+            <xs:element name="r_name" type="xs:string"/>
+            <xs:element name="r_desc" type="xs:string"/>
+            <xs:element name="r_img" type="xs:string"/>
+            <xs:element name="r_price" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="getRoomBookRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="fullName" type="xs:string"/>
+                <xs:element name="email" type="xs:string"/>
+                <xs:element name="phone" type="xs:string"/>
+                <xs:element name="roomType" type="xs:string"/>
+                <xs:element name="stayRange" type="tns:stayRangeType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getRoomBookResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="bookStatus" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="stayRangeType">
+        <xs:sequence>
+            <xs:element name="startDate" type="xs:string"/>
+            <xs:element name="endDate" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:element name="getReservModifyRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="bookingId" type="xs:string"/>
+                <xs:element name="fullName" type="xs:string"/>
+                <xs:element name="email" type="xs:string"/>
+                <xs:element name="phone" type="xs:string"/>
+                <xs:element name="roomType" type="xs:string"/>
+                <xs:element name="stayRange" type="tns:stayRangeType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getReservModifyResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="modifyStatus" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getReservIsValidRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="bookingId" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getReservIsValidResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="reservIsValid" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getReservDetailsRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="bookingId" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getReservDetailsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="fullName" type="xs:string"/>
+                <xs:element name="email" type="xs:string"/>
+                <xs:element name="phone" type="xs:string"/>
+                <xs:element name="roomType" type="xs:string"/>
+                <xs:element name="stayRange" type="tns:stayRangeType"/>
+                <xs:element name="r_name" type="xs:string"/>
+                <xs:element name="r_desc" type="xs:string"/>
+                <xs:element name="r_img" type="xs:string"/>
+                <xs:element name="r_price" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getReservCancelRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="bookingId" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getReservCancelResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="message" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -9,7 +9,7 @@ const navUnActive =
   "border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6";
 
 export default function Navbar() {
-  const [curPage, setCurPage]: any = useState(0);
+  const [curPage, setCurPage]: any = useState(-1);
 
   function setCurActivePage(pageIndx: number) {
     setCurPage(pageIndx);
@@ -31,7 +31,7 @@ export default function Navbar() {
         setCurPage(3);
         break;
     }
-  }, []);
+  });
 
   return (
     <nav className="bg-white shadow dark:bg-gray-800">

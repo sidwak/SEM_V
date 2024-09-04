@@ -1,11 +1,14 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Datepicker from "react-tailwindcss-datepicker";
 import SideHeroDiv from "../components/sideHeroDiv";
 import AlertModal from "../components/alertModal";
+import { useRouter } from "next/navigation";
 
 export default function BookingPage() {
+  const router = useRouter();
+
   const [dateVal, setDateVal]: any = useState({
     startDate: null,
     endDate: null,
@@ -16,8 +19,15 @@ export default function BookingPage() {
   const roomTypeRef: any = useRef("defaultType");
 
   const [modalClose, setModalClose]: any = useState(true);
+  const [modalHead, setModalHead]: any = useState("Default_Heading");
+  const [modalDesc, setModalDesc]: any = useState(
+    "This is the default modal description. you will need to change it in the use state method or this will be like this forever"
+  );
 
   function sendDataToBackend() {
+    if (validateInput() == false) {
+      return;
+    }
     console.log(fullNameRef.current.value);
     console.log(emailRef.current.value);
     console.log(phoneRef.current.value);
@@ -35,22 +45,58 @@ export default function BookingPage() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(postData),
     })
-      .then(function (res) {
+      .then((res) => {
+        console.log(res);
+        res.headers.forEach((value, key) => {
+          console.log(`${key} ==> ${value}`);
+        });
         return res.text();
       })
       .then((response) => {
         console.log("data send success");
         console.log(response);
-        setModalClose(false);
+        popUpModalAlert_ReservSuccess(response);
       })
       .catch((err) => {
         console.log("error data send" + err);
       });
   }
 
+  function validateInput() {
+    if (
+      fullNameRef.current.value === "" ||
+      emailRef.current.value === "" ||
+      phoneRef.current.value === ""
+    ) {
+      popUpModalAlert_InputNotSet();
+      return false;
+    } else {
+      return true;
+    }
+  }
+  function popUpModalAlert_InputNotSet() {
+    setModalHead("Details not filled");
+    setModalDesc(
+      "The Reservation details are not filled, please enter all the required details for the reservation in order to proceed further"
+    );
+    setModalClose(false);
+  }
+  function popUpModalAlert_ReservSuccess(bookingId: string) {
+    setModalHead("Reservation Confirmed");
+    setModalDesc(
+      `Your reservation is confirmed and your booking id is=> ${bookingId}. For any updates or queries you can contact use anytime. Hope you enjoy your stay`
+    );
+    setModalClose(false);
+  }
+
   return (
     <div className="bg-white dark:bg-gray-900">
-      <AlertModal isClose={modalClose} setClose={setModalClose} />
+      <AlertModal
+        isClose={modalClose}
+        setClose={setModalClose}
+        headData={modalHead}
+        descData={modalDesc}
+      />
       <div className="flex justify-center h-screen">
         <SideHeroDiv />
         <div className="flex items-center w-full max-w-md px-6 mx-auto lg:w-2/6">
