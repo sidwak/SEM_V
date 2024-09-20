@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>one-item-cart</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d4cf007c-3849-44ee-b4a4-1b8f5ee3dd3c</testCaseGuid>
+</TestCaseEntity>

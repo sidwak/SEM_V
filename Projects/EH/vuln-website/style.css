@@ -1,0 +1,11 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: red; /* Poor choice of color */
+}
+
+form {
+    margin-top: 20px;
+}

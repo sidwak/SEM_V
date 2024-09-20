@@ -1,0 +1,19 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 2
+    },
+    "auditLog": "C:\\Users\\Vaishanvi\\Desktop\\Siddhesh\\SEM V\\SEM_V\\Projects\\EH\\juice-shop\\logs/.audit.json",
+    "files": [
+        {
+            "date": 1726749046236,
+            "name": "C:\\Users\\Vaishanvi\\Desktop\\Siddhesh\\SEM V\\SEM_V\\Projects\\EH\\juice-shop\\logs\\access.log.2024-09-19",
+            "hash": "d402dca035aacdbf5f08cedfd4fdc6b7"
+        },
+        {
+            "date": 1726818303106,
+            "name": "C:\\Users\\Vaishanvi\\Desktop\\Siddhesh\\SEM V\\juice-shop\\logs\\access.log.2024-09-20",
+            "hash": "33c2f8aa96db293b3c8e4fbfabf57264"
+        }
+    ]
+}
