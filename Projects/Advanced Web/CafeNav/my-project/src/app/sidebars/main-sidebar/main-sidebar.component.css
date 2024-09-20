@@ -1,0 +1,17 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* border-right: 1px solid #00366d; Border for visual separation */
+  transform: translateX(-100%); /* Hide off-screen */
+  transition: transform 0.3s ease; /* Smooth transition */
+  z-index: 1000; /* Ensure it is on top */
+}
+
+.sidebar.active {
+  transform: translateX(0); /* Bring into view */
+}
+
+.sidebar.inactive {
+  transform: translateX(-100%); /* Hide off-screen */
+}

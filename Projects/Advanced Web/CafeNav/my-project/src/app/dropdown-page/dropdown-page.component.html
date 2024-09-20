@@ -1,0 +1,166 @@
+<div class="text-center">
+  <h1>Dropdowns</h1>
+  <h3 class="text-body-secondary">Use the buttons to open the dropdowns</h3>
+</div>
+<div class="b-example-divider"></div>
+<div>
+  <div
+    class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center"
+  >
+    <button
+      type="button"
+      class="btn btn-success btn-md"
+      (click)="setDropdown1Visible()"
+    >
+      Open
+    </button>
+    <ul
+      class="dropdown-menu position-static d-grid gap-1 p-2 rounded-3 mx-0 shadow w-220px"
+      data-bs-theme="light"
+      [ngClass]="isDropdown1Visible ? 'dp-menu show' : 'dp-menu'"
+    >
+      <li><a class="dropdown-item rounded-2 active" href="#">Action</a></li>
+      <li><a class="dropdown-item rounded-2" href="#">Another action</a></li>
+      <li>
+        <a class="dropdown-item rounded-2" href="#">Something else here</a>
+      </li>
+      <li><hr class="dropdown-divider" /></li>
+      <li><a class="dropdown-item rounded-2" href="#">Main Action</a></li>
+    </ul>
+    <ul
+      class="dropdown-menu position-static d-grid gap-1 p-2 rounded-3 mx-0 border shadow w-220px"
+      data-bs-theme="dark"
+    >
+      <li><a class="dropdown-item rounded-2 active" href="#">Action</a></li>
+      <li><a class="dropdown-item rounded-2" href="#">Another action</a></li>
+      <li>
+        <a class="dropdown-item rounded-2" href="#">Something else here</a>
+      </li>
+      <li><hr class="dropdown-divider" /></li>
+      <li><a class="dropdown-item rounded-2" href="#">Main Action</a></li>
+    </ul>
+  </div>
+  <div
+    class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center"
+  >
+    <button
+      type="button"
+      class="btn btn-success btn-md"
+      (click)="setDropdown2Visible()"
+    >
+      Open
+    </button>
+    <ul
+      class="dropdown-menu d-block position-static mx-0 shadow w-220px"
+      data-bs-theme="light"
+      [ngClass]="isDropdown2Visible ? 'dp-menu show' : 'dp-menu'"
+    >
+      <li>
+        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+          <svg class="bi" width="16" height="16">
+            <use xlink:href="#files"></use>
+          </svg>
+          Documents
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+          <svg class="bi" width="16" height="16">
+            <use xlink:href="#image-fill"></use>
+          </svg>
+          Photos
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+          <svg class="bi" width="16" height="16">
+            <use xlink:href="#film"></use>
+          </svg>
+          Movies
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+          <svg class="bi" width="16" height="16">
+            <use xlink:href="#music-note-beamed"></use>
+          </svg>
+          Music
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+          <svg class="bi" width="16" height="16">
+            <use xlink:href="#joystick"></use>
+          </svg>
+          Games
+        </a>
+      </li>
+      <li><hr class="dropdown-divider" /></li>
+      <li>
+        <a
+          class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center"
+          href="#"
+        >
+          <svg class="bi" width="16" height="16">
+            <use xlink:href="#trash"></use>
+          </svg>
+          Trash
+        </a>
+      </li>
+    </ul>
+    <ul
+      class="dropdown-menu d-block position-static mx-0 border-0 shadow w-220px"
+      data-bs-theme="dark"
+    >
+      <li>
+        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+          <svg class="bi" width="16" height="16">
+            <use xlink:href="#files"></use>
+          </svg>
+          Documents
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+          <svg class="bi" width="16" height="16">
+            <use xlink:href="#image-fill"></use>
+          </svg>
+          Photos
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+          <svg class="bi" width="16" height="16">
+            <use xlink:href="#film"></use>
+          </svg>
+          Movies
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+          <svg class="bi" width="16" height="16">
+            <use xlink:href="#music-note-beamed"></use>
+          </svg>
+          Music
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+          <svg class="bi" width="16" height="16">
+            <use xlink:href="#joystick"></use>
+          </svg>
+          Games
+        </a>
+      </li>
+      <li><hr class="dropdown-divider" /></li>
+      <li>
+        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+          <svg class="bi" width="16" height="16">
+            <use xlink:href="#trash"></use>
+          </svg>
+          Trash
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

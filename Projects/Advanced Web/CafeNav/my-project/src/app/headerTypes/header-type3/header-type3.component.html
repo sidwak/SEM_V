@@ -1,0 +1,62 @@
+<div class="container">
+  <header
+    class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
+  >
+    <!-- <div class="col-md-3 mb-2 mb-md-0">
+      <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+        <svg
+          class="bi"
+          width="40"
+          height="32"
+          role="img"
+          aria-label="Bootstrap"
+        >
+          <use xlink:href="#bootstrap"></use>
+        </svg>
+      </a>
+    </div> -->
+    <button
+      type="button"
+      class="btn btn-secondary btn-md"
+      (click)="openSidebar()"
+    >
+      Menu
+    </button>
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 ms-5">
+      <li>
+        <a routerLink="/navbarpage" class="nav-link" routerLinkActive="active">
+          Navbars</a
+        >
+      </li>
+      <li>
+        <a routerLink="/sidebarpage" class="nav-link" routerLinkActive="active">
+          Sidebars</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/dropdownpage"
+          class="nav-link"
+          routerLinkActive="active"
+        >
+          Dropdowns</a
+        >
+      </li>
+      <li>
+        <a routerLink="/aboutpage" class="nav-link" routerLinkActive="active">
+          About</a
+        >
+      </li>
+    </ul>
+
+    <div class="col-md-auto text-end">
+      <button type="button" class="btn btn-outline-primary me-2">Login</button>
+      <button type="button" class="btn btn-primary">Sign-up</button>
+    </div>
+  </header>
+  <div class="d-flex justify-content-center pb-4" *ngIf="showUseButton">
+    <button type="button" class="btn btn-success btn-md" (click)="btnClick()">
+      Use This
+    </button>
+  </div>
+</div>

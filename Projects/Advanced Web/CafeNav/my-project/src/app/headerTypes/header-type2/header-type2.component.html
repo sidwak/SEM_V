@@ -1,0 +1,52 @@
+<div class="container">
+  <header class="d-flex justify-content-center py-3 border-bottom">
+    <button
+      type="button"
+      class="btn btn-secondary btn-md me-auto"
+      (click)="openSidebar()"
+    >
+      Menu
+    </button>
+    <ul class="nav nav-pills me-auto">
+      <li class="nav-item">
+        <a
+          routerLink="/"
+          class="nav-link"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          Home</a
+        >
+      </li>
+      <li class="nav-item">
+        <a routerLink="/navbarpage" class="nav-link" routerLinkActive="active">
+          Navbars</a
+        >
+      </li>
+      <li class="nav-item">
+        <a routerLink="/sidebarpage" class="nav-link" routerLinkActive="active">
+          Sidebars</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          routerLink="/dropdownpage"
+          class="nav-link"
+          routerLinkActive="active"
+        >
+          Dropdowns</a
+        >
+      </li>
+      <li class="nav-item">
+        <a routerLink="/aboutpage" class="nav-link" routerLinkActive="active">
+          About</a
+        >
+      </li>
+    </ul>
+  </header>
+  <div class="d-flex justify-content-center py-4" *ngIf="showUseButton">
+    <button type="button" class="btn btn-success btn-md" (click)="btnClick()">
+      Use This
+    </button>
+  </div>
+</div>

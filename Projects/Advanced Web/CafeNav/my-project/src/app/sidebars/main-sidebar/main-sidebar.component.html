@@ -1,0 +1,10 @@
+<!-- <app-sidebar-type1
+  class="sidebar"
+  [ngClass]="{ active: sidebarStatusOpen, inactive: !sidebarStatusOpen }"
+></app-sidebar-type1> -->
+<div
+  class="sidebar"
+  [ngClass]="{ active: sidebarStatusOpen, inactive: !sidebarStatusOpen }"
+>
+  <ng-container *ngComponentOutlet="getSidebarComponent()" />
+</div>
