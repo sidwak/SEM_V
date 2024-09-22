@@ -6,7 +6,7 @@ function Solve(val) {
     var num1 = document.getElementById('res').value;
     try {
        var num2 = eval(num1.replace('x', '*'));
-       document.getElementById('res').value = num2 + '1';
+       document.getElementById('res').value = num2  + '1';  //  + '1';
     } catch {
        document.getElementById('res').value = 'Error';
     }

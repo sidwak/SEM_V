@@ -15,4 +15,7 @@ export class SidebarType1Component {
   changeSidebar() {
     this.sidebarService.setSidebarType(this.thisSidebarType);
   }
+  openSidebar(): void {
+    this.sidebarService.setSidebarOpen(!this.sidebarService.getSidebarOpen());
+  }
 }

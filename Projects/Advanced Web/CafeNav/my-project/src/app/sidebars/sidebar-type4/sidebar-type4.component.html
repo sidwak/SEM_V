@@ -1,13 +1,19 @@
 <div class="flex-shrink-0 p-3 vh-100 border-end bg-dark" style="width: 280px">
-  <a
-    href="/"
+  <div
     class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom"
   >
     <svg class="bi pe-none me-2" width="30" height="24">
       <use xlink:href="#bootstrap"></use>
     </svg>
     <span class="fs-5 fw-semibold">Collapsible</span>
-  </a>
+    <button
+      type="button"
+      class="btn btn-secondary btn-md me-auto ms-3"
+      (click)="openSidebar()"
+    >
+      Close
+    </button>
+  </div>
   <ul class="list-unstyled ps-0">
     <li class="mb-1">
       <button

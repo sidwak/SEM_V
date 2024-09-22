@@ -3,17 +3,21 @@
     <h1 class="display-5 fw-bold text-white">About Us</h1>
     <div class="col-lg-6 mx-auto">
       <p class="fs-5 mb-4">
-        Quickly design and customize responsive mobile-first sites with
-        Bootstrap, the world’s most popular front-end open source toolkit,
-        featuring Sass variables and mixins, responsive grid system, extensive
-        prebuilt components, and powerful JavaScript plugins.
+        A well-designed menu bar is crucial for user experience. It guides visitors through your website, ensuring they find what they're looking for with ease. From drop-downs to sidebars, our collection highlights the versatility and creativity possible in navigation design.
       </p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
         <button
           type="button"
           class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold"
         >
-          Custom button
+        <a
+        routerLink="/"
+        class="nav-link"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Home</a
+      >
         </button>
         <!-- <button type="button" class="btn btn-outline-light btn-lg px-4">
           Secondary
